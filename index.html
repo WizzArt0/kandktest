@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Тестовое задание</title>
+</head>
+<body>
+  <header>
+    <div class="head_wrapper">
+        <nav class="header_menu_buttons" id="navigation">
+          <a href="#" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+          <a href="#home" class="active">Главная</a>
+          <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" href="#news">Авторизация</a>
+          <div id="id01" class="modal">
+  
+            <form class="modal-form-login">
+          
+              <div class="container">
+                <h1>Авторизация</h1>
+                <hr>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn-log">Cancel</button>
+                <span class="psw"> <a href=""> Forgot password?</a></span>
+              </div>
+            </form>
+          </div> 
+          <a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" href="#contact">Регистрация</a>
+          <div id="id02" class="modal">
+            <form class="modal-form-registr">
+              <div class="container">
+                <h1>Регистрация</h1>
+                <p>Заполните формы для регистрации.</p>
+                <hr>
+                <label for="name"><b>Nickname</b></label>
+                <input type="text" placeholder="Enter Nickname" name="Nickname" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+          
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="password-input" placeholder="Enter Password" name="password" required>
+          
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" id="password-repeat" placeholder="Repeat Password" name="password" required>
+                
+                <label><input type="checkbox" class="password-checkbox" onclick="return show_hide_password(this);"> Показать пароль</label><br><br>
+
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+          
+                <div class="clearfix">
+                  <button type="submit" class="signupbtn">Sign Up</button>
+                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn-reg">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <a href="#about">Профиль</a>
+          </a>
+        </nav>
+    </div>
+  </header>
+  <main>
+    <div class="main-wrapper">
+        <div class="news">
+            <div class="first_new">
+                <a href="#"><h2>Important News</h2></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad impedit necessitatibus tempora exercitationem nam nesciunt sequi enim</p>
+            </div>
+            <div class="second_new">
+                <a href="#"><h2>Important News</h2></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad impedit necessitatibus tempora exer</p>
+            </div>
+            <div class="third_new"><a href="#"><h2>Important News</h2></a> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad impedit necessitatibus tempora exercitationem nam nesciunt sequi enim</p>
+           </div>
+        </div>
+        <div class="info">
+            <div class="info_title"><h2>INFORMATION</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse suscipit, tenetur laborum ipsam accusamus natus consequatur, dolorum illo placeat aperiam fugiat similique dignissimos ab iusto dolor sunt accusantium. Amet, ab.</div>
+            <div class="pic"><img src="media/zxcursed.gif" alt=""></div>
+        </div>
+
+    </div>
+    <!-- <br>a<br>a<br>a<br>a<br>a -->
+  </main>
+  <footer>
+      <div class="foot">footer info</div>
+  </footer>
+
+
+  <script>
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    var modal = document.getElementById('id02');
+
+
+    function myFunction() {
+    var x = document.getElementById("navigation");
+    if (x.className === "header_menu_buttons") {
+        x.className += " responsive";
+    } else {
+        x.className = "header_menu_buttons";
+    }
+  }
+
+  //   function show_hide_password(target){
+
+  //   var input = document.getElementById('password-input');
+  //   if (input.getAttribute('type') == 'password') {
+  //     target.classList.add('view');
+  //     input.setAttribute('type', 'text');
+  //   } else {
+  //     target.classList.remove('view');
+  //     input.setAttribute('type', 'password');
+  //   }
+  //   return false;
+  // }
+    </script>
+</body>
+
+</html>

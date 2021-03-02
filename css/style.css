@@ -1,0 +1,246 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.head_wrapper{
+    background-color:cornsilk;
+    width: 100%;
+}
+
+header{
+    flex: 0 0 auto;
+}
+
+.header_menu_buttons{
+    overflow: hidden;
+} 
+
+.header_menu_buttons a{
+    float: right;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-size: 1.3em;
+}
+
+.header_menu_buttons a:hover{
+    cursor: pointer;
+    background-color:burlywood ;
+}
+
+.active{
+    background-color: #97be99;
+}
+
+.header_menu_buttons .icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .header_menu_buttons a:not(:first-child) {display: none;}
+    .header_menu_buttons a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .header_menu_buttons.responsive {position: relative;}
+    .header_menu_buttons.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .header_menu_buttons.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+ input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.cancelbtn-log {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.container {
+    padding: 16px;
+}
+
+.psw {
+    float: right;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding-top: 8px;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 40px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+/* Modal Content/Box */
+.modal-form-login{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 40%; 
+}
+
+.modal-form-registr input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.cancelbtn-reg {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* .cancelbtn-reg, .signupbtn {
+    float: left;
+    width: 50%;
+} */
+
+.modal-form-registr {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 45%; 
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* .modal-content{
+        width: 50%;
+    } */
+    .modal-form-registr{
+        width: 60%;
+    }
+    .modal-form-login{
+        width: 60%;
+    }
+}
+
+/* main */
+
+main{
+    width: 90%;
+    margin: 0 auto;
+    flex: 1 0 auto;
+    
+}
+
+.main-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.news{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vw;
+    width: 50%;
+    text-decoration: none;
+}
+
+.news a{
+    text-decoration: none;
+    color: black;
+}
+
+.news p{
+    color: grey;
+}
+
+.info{
+    width: 50%;
+    padding: 30px;
+    font-size: 16px;
+    color: grey;
+}
+
+@media screen and (max-width: 600px) {
+    .main-wrapper{
+        display: block;
+    }
+    .news{
+        width: 100%;
+    }
+    .info{
+        margin: 0 auto;
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    background-color: dimgrey;
+    height: 70px;
+    flex: 0 0 auto;
+    margin-top: 50px;
+}
+
+.foot{
+    width: 90%;
+    margin: 0 auto;
+}
