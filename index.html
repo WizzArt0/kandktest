@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="main.js"></script>
     <title>Тестовое задание</title>
 </head>
 <body>
@@ -52,7 +52,7 @@
                 <input type="text" placeholder="Enter Nickname" name="Nickname" required>
 
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="text" id="email_id" placeholder="Enter Email" max="20q" name="email" required>
           
                 <label for="psw"><b>Password</b></label>
                 <input type="password" id="password-input" placeholder="Enter Password" name="password" required>
@@ -67,7 +67,7 @@
                 </label>
           
                 <div class="clearfix">
-                  <button type="submit" class="signupbtn">Sign Up</button>
+                  <button type="submit" id="validate" class="signupbtn">Sign Up</button>
                   <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn-reg">Cancel</button>
                 </div>
               </div>
@@ -99,48 +99,13 @@
         </div>
 
     </div>
-    <!-- <br>a<br>a<br>a<br>a<br>a -->
+    <!-- <br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a<br>a -->
   </main>
   <footer>
       <div class="foot">footer info</div>
   </footer>
 
 
-  <script>
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    var modal = document.getElementById('id02');
-
-
-    function myFunction() {
-    var x = document.getElementById("navigation");
-    if (x.className === "header_menu_buttons") {
-        x.className += " responsive";
-    } else {
-        x.className = "header_menu_buttons";
-    }
-  }
-
-  //   function show_hide_password(target){
-
-  //   var input = document.getElementById('password-input');
-  //   if (input.getAttribute('type') == 'password') {
-  //     target.classList.add('view');
-  //     input.setAttribute('type', 'text');
-  //   } else {
-  //     target.classList.remove('view');
-  //     input.setAttribute('type', 'password');
-  //   }
-  //   return false;
-  // }
-    </script>
 </body>
 
 </html>
